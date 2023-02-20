@@ -103,6 +103,7 @@ public class Database {
                     "UPDATE items SET client = (SELECT num FROM clients WHERE prenom = ?) WHERE num = ?"
             );
 
+
             s1.setString(1, prenom);
             s1.setInt(2, item);
             s1.executeUpdate();
